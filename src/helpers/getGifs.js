@@ -1,5 +1,5 @@
 /**
- * Realiza la peticion para traer 6 gifs
+ * Realiza la peticion para traer 9 gifs
  */
 export const getGifs = async (category) => {
 	const url = `https://api.giphy.com/v1/gifs/search?q=${encodeURI(category)}&limit=9&api_key=zrE65QeG297xnvsvBATfWECzmBnxNEhP`;

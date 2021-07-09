@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const CategoryAdd = ({ setCategories }) => {
 	//
-	const [inputValue, setInputValue] = useState('Pets');
+	const [inputValue, setInputValue] = useState('');
 
 	const handleInputChange = (event) => {
 		setInputValue(event.target.value);
@@ -23,7 +23,7 @@ const CategoryAdd = ({ setCategories }) => {
 		<form onSubmit={handleSubmit}>
 			<h3>Write a category and hit ENTER :D</h3>
 			<h4>Current category :: {inputValue}</h4>
-			<input type='text' value={inputValue} onChange={handleInputChange}></input>
+			<input type='text' value={inputValue} onChange={handleInputChange} placeholder='Pets'></input>
 		</form>
 	);
 };

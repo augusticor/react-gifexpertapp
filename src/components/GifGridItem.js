@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // destructuro el spread ...imagen que es un objeto en los props
-const GifGridItem = ({ id, title, url }) => {
-	// console.log(id, title, url);
+const GifGridItem = ({ title, url }) => {
+	// console.log(title, url);
 
 	return (
 		<div className='card animate__animated animate__fadeIn animate__slower'>
@@ -10,6 +11,11 @@ const GifGridItem = ({ id, title, url }) => {
 			<p>{title}</p>
 		</div>
 	);
+};
+
+GifGridItem.propTypes = {
+	title: PropTypes.string.isRequired,
+	url: PropTypes.string.isRequired,
 };
 
 export default GifGridItem;
